@@ -1,18 +1,16 @@
 PRODUCT MANAGER
 
-The Product Manager is a web application designed to help users efficiently manage products by tracking inventory, categorizing items, and facilitating smooth operations for businesses.
+A web application  for managing products, tracking inventory, and organizing items efficiently.
 
 Features
 
-Create, update, and delete products
+~ Create, update, and delete products
 
-Categorize and organize products
+~ Categorize Products and Responsive website.
 
-User authentication & authorization
+~ User Authentication & Authorization
 
-Responsive and modern user interface
-
-API with full CRUD operations
+~ API with CRUD operations
 
 Tech Stack
 
@@ -22,4 +20,4 @@ Backend: Node.js, Express.js
 
 Database: MongoDB (NoSQL)
 
-Deployment: Vercel & Render
+
