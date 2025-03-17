@@ -28,7 +28,17 @@ app.post("/api/products", async (req, res) => {
     res.status(500).json({ success: false, message: "Server Error" });
   }
 });
-console.log(process.env.MONGO_URI);
+
+app.delete("/api/products/:id", async (req, res) => {
+  const { id } = req.params;
+
+  try {
+    await Product.findByIdAndDelete(id);
+    res.status(200).json({ success: true, message: "Product deleted" });
+  } catch (error) {
+    res.status(404).json({ success: false, message: "Product not found" });
+  }
+});
 
 app.listen(5000, () => {
   connectDB();
