@@ -1,13 +1,23 @@
-import { Button, Container, Flex, HStack, Text } from "@chakra-ui/react";
+import {
+  Button,
+  Container,
+  Flex,
+  HStack,
+  Text,
+  useColorMode,
+} from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 import { PlusSquareIcon } from "@chakra-ui/icons";
+import { IoMoon } from "react-icons/io5";
+import { LuSun } from "react-icons/lu";
 
 // The default icon size is 1em (16px)
 
 const Navbar = () => {
+  const { colorMode, toggleColorMode } = useColorMode();
   return (
     <>
-      <Container maxW={"1140px"} bgGradient='linear(90deg, #0F2027,  #203A43)'>
+      <Container maxW={"1140px"}>
         <Flex
           h={16}
           alignItems={"center"}
@@ -19,7 +29,7 @@ const Navbar = () => {
             fontWeight={"bold"}
             textTransform={"uppercase"}
             textAlign={"center"}
-            bgGradient='linear(to-l, #B0BEC5,  #FFFFFF)'
+            bgGradient='linear(90deg, #4A4A4A, #D4AF91)'
             bgClip={"text"}
           >
             <Link to={"/"}>Product Store 🛒</Link>
@@ -30,6 +40,13 @@ const Navbar = () => {
                 <PlusSquareIcon fontSize={20} />
               </Button>
             </Link>
+            <Button onClick={toggleColorMode}>
+              {colorMode == "light" ? (
+                <IoMoon></IoMoon>
+              ) : (
+                <LuSun size='20'></LuSun>
+              )}
+            </Button>
           </HStack>
         </Flex>
       </Container>
