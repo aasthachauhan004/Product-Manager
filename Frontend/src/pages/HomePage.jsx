@@ -9,6 +9,7 @@ const HomePage = () => {
 
   useEffect(() => {
     fetchProducts();
+    // console.log("fetch products changed.");
   }, [fetchProducts]);
   console.log("products", products);
 
@@ -22,7 +23,7 @@ const HomePage = () => {
           bgClip={"text"}
           textAlign={"center"}
         >
-          Current Products
+          Current list
         </Text>
 
         <SimpleGrid
